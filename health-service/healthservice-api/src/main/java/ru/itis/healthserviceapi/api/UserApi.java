@@ -12,7 +12,7 @@ import ru.itis.healthserviceapi.dto.response.UserResponse;
 @Tag(name = "UserApi")
 @RequestMapping("api/v1/user")
 public interface UserApi {
-    @PostMapping
+    @PostMapping("/save")
     @Operation(summary = "Создание пользователя", method = "create")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Пользователь создан"),

@@ -5,6 +5,5 @@ public record UserSave(String username,
                        String lastname,
                        int age,
                        int weight,
-                       int height,
-                       String role) {
+                       int height) {
 }
