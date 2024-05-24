@@ -11,7 +11,7 @@ databaseChangeLog:
                   value: USER
               - column:
                   name: create_date
-                  value: 22.05.2024
+                  value: 24-05-2024
         - insert:
             tableName: community_role_type
             columns:
