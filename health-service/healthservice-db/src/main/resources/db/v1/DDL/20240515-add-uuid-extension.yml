@@ -1,9 +1,0 @@
-databaseChangeLog:
-  - changeSet:
-      id: 4
-      author: DmitriyLarin
-      changes:
-        - sql:
-            splitStatements: false
-            endDelimiter: ';'
-            sql: CREATE EXTENSION IF NOT EXISTS "uuid-ossp";

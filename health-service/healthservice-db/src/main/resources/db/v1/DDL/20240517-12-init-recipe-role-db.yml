@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
       id: 3
-      author: DmitriyLarin
+      author: salyukov
       changes:
         - createTable:
-            tableName: drinking_water
+            tableName: recipe_role
             columns:
               - column:
                   name: id
@@ -12,25 +12,19 @@ databaseChangeLog:
                   defaultValueComputed: uuid_generate_v4()
                   constraints:
                     primaryKey: true
-                    primaryKeyName: drinking_water_pk
+                    primaryKeyName: recipe_role_pk
               - column:
-                  name: milliliters
-                  type: int
+                  name: type
+                  type: varchar(40)
                   constraints:
                     nullable: false
               - column:
-                  name: create_date
-                  type: timestamp
-                  constraints:
-                    nullable: false
-              - column:
-                  name: account_id
+                  name: user_id
                   type: uuid
                   constraints:
                     nullable: false
-        - addForeignKeyConstraint:
-            baseColumnNames: account_id
-            baseTableName: drinking_water
-            constraintName: drinking_water_account_id_fk
-            referencedColumnNames: id
-            referencedTableName: account
+              - column:
+                  name: recipe_id
+                  type: uuid
+                  constraints:
+                    nullable: false
